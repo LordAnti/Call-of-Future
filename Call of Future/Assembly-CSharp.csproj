@@ -127,6 +127,7 @@
     <Compile Include="Assets\Scripts\PHealth.cs" />
     <Compile Include="Assets\Scripts\Properties\CameraConfig.cs" />
     <Compile Include="Assets\Scripts\Properties\CharacterStatus.cs" />
+    <Compile Include="Assets\Scripts\Properties\NPSStatus.cs" />
     <Compile Include="Assets\Scripts\Properties\SceneStatus.cs" />
     <Compile Include="Assets\Scripts\Weapons\Pistol.cs" />
     <Compile Include="Assets\Scripts\Zombie.cs" />
