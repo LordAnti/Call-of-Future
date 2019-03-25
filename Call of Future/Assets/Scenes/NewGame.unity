@@ -5517,11 +5517,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2239387707434868707, guid: 8d44c758ffebe0047bd517fb15e70a54,
-        type: 3}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1894365070386280, guid: 8d44c758ffebe0047bd517fb15e70a54, type: 3}
       propertyPath: m_Name
       value: Guard 1
@@ -5529,6 +5524,16 @@ PrefabInstance:
     - target: {fileID: 1894365070386280, guid: 8d44c758ffebe0047bd517fb15e70a54, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2239387707434868707, guid: 8d44c758ffebe0047bd517fb15e70a54,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2239387707434868707, guid: 8d44c758ffebe0047bd517fb15e70a54,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4109231141536302, guid: 8d44c758ffebe0047bd517fb15e70a54, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5592,6 +5597,15 @@ PrefabInstance:
     - target: {fileID: 1011533041347106, guid: 8d44c758ffebe0047bd517fb15e70a54, type: 3}
       propertyPath: m_TagString
       value: Meat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270854506581152, guid: 8d44c758ffebe0047bd517fb15e70a54, type: 3}
+      propertyPath: m_TagString
+      value: Meat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568878311067617785, guid: 8d44c758ffebe0047bd517fb15e70a54,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d44c758ffebe0047bd517fb15e70a54, type: 3}
