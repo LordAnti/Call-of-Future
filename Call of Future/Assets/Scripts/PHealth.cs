@@ -13,6 +13,11 @@ public class PHealth : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        
+    }
+
     public void AddDamage(float damage)
     {
         HP -= damage;

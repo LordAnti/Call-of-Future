@@ -14,6 +14,8 @@ public class Pistol : MonoBehaviour
     public GameObject sandEffect;
     public GameObject stoneEffect;
     public GameObject woodEffect;
+    public GameObject d;
+    public GameObject d1;
 
     public CharacterStatus cs;
 
@@ -89,12 +91,14 @@ public class Pistol : MonoBehaviour
                         break;
                     case "Meat":
                         SpawnDecal(hit, meatEffect);
-                        if(hit.transform.GetComponent<PArmor>() != null)
-                        if (hit.transform.GetComponent<PArmor>().AP > 0)
-                            hit.transform.GetComponent<PArmor>().AddDamage(35);
+                        d1 = hit.transform.parent.gameObject;
+                       // d1 = d.transform.parent.gameObject;
+                        if (d1.transform.GetComponent<PArmor>() != null)
+                        if (d1.transform.GetComponent<PArmor>().AP > 0)
+                            d1.transform.GetComponent<PArmor>().AddDamage(35);
                         else
-                                if (hit.transform.GetComponent<PHealth>())
-                                    hit.transform.GetComponent<PHealth>().AddDamage(40);
+                                if (d1.transform.GetComponent<PHealth>())
+                                    d1.transform.GetComponent<PHealth>().AddDamage(40);
                         break;
                     default:
                         dec = Instantiate<GameObject>(decal);
@@ -113,6 +117,7 @@ public class Pistol : MonoBehaviour
     {
         GameObject spawnDecal = GameObject.Instantiate(prefab, hit.point, Quaternion.LookRotation(-hit.normal));
         spawnDecal.transform.SetParent(hit.collider.transform);
+        print(hit.collider.gameObject.tag);
         Destroy(spawnDecal.gameObject, 10);
     }
 }
