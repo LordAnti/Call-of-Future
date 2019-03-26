@@ -124,7 +124,6 @@
     <Compile Include="Assets\Scripts\ModeJump.cs" />
     <Compile Include="Assets\Scripts\ModeRun.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
-    <Compile Include="Assets\Scripts\PArmor.cs" />
     <Compile Include="Assets\Scripts\PHealth.cs" />
     <Compile Include="Assets\Scripts\Properties\CameraConfig.cs" />
     <Compile Include="Assets\Scripts\Properties\CharacterStatus.cs" />

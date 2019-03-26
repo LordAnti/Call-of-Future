@@ -32,7 +32,6 @@ public class AI_pers2 : MonoBehaviour
 
     }
 
-
     // Update is called once per frame
     void Update()
     {
@@ -53,10 +52,7 @@ public class AI_pers2 : MonoBehaviour
                 if (transform.GetComponent<PHealth>().HP > 0)
                 {
                     //transform.LookAt(player.transform);
-                    if (player.transform.GetComponent<PArmor>().AP > 0)
-                        player.transform.GetComponent<PArmor>().AddDamage(1);
-                    else
-                        player.transform.GetComponent<PHealth>().AddDamage(1);
+                    player.transform.GetComponent<PHealth>().AddDamage(1, "bullet", "bullet");
                     //gameObject.GetComponent<Animator>().SetTrigger("attack1");
                 }
             }

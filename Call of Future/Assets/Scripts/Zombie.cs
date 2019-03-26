@@ -37,10 +37,7 @@ public class Zombie : MonoBehaviour
 
             if ((d <= 1.5) && (player.transform.GetComponent<PHealth>().HP > 0))
             {
-                if (player.transform.GetComponent<PArmor>().AP > 0)
-                    player.transform.GetComponent<PArmor>().AddDamage(1);
-                else
-                    player.transform.GetComponent<PHealth>().AddDamage(1);
+                player.transform.GetComponent<PHealth>().AddDamage(1, "bullet", "bullet");
             }
         }
         else

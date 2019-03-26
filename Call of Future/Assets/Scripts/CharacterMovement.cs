@@ -146,7 +146,7 @@ public class CharacterMovement : MonoBehaviour
             fallDistance = Math.Abs(fallDistance - lastPositionY);
             if (fallDistance > 2.5)
             {
-                GetComponent<PHealth>().AddDamage((fallDistance - 1) * (fallDistance - 1) * ((fallDistance - 1) / 3));
+                GetComponent<PHealth>().AddDamage((fallDistance - 1) * (fallDistance - 1) * ((fallDistance - 1) / 3), "fall", "fall");
                 fallDistance = 0;
                 lastPositionY = 0;
             }
