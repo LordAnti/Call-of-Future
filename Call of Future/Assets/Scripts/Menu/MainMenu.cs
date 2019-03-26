@@ -23,4 +23,3 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Игра закрылась.");
     }  
 }
-//Сегодня мы будем убивать людей
