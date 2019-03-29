@@ -35,6 +35,9 @@ public class PlayerInventory : MonoBehaviour
 
     int normalSize = 3;
 
+    private PlayerInventory playerInventory;
+    public bool valForWeapon;
+
     public void OnEnable()
     {
         Inventory.ItemEquip += OnBackpack;
@@ -66,6 +69,8 @@ public class PlayerInventory : MonoBehaviour
         if (item.itemType == ItemType.Weapon)
         {
             //add the weapon if you unequip the weapon
+            valForWeapon = true;
+            print("true");
         }
     }
 
@@ -74,6 +79,8 @@ public class PlayerInventory : MonoBehaviour
         if (item.itemType == ItemType.Weapon)
         {
             //delete the weapon if you unequip the weapon
+            valForWeapon = false;
+            print("false");
         }
     }
 
@@ -286,6 +293,7 @@ public class PlayerInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerInventory = this;
         if (Input.GetKeyDown(inputManagerDatabase.CharacterSystemKeyCode))
         {
             if (!characterSystem.activeSelf)

@@ -271,7 +271,7 @@ MonoBehaviour:
   inventoryTitle: "\u0418\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C\n"
   inventoryTitleText: {fileID: 1714288264}
   inventoryTitlePosX: 0
-  inventoryTitlePosY: 347
+  inventoryTitlePosY: 463
   panelSizeX: 0
   panelSizeY: 0
 --- !u!114 &43821362
@@ -2265,6 +2265,7 @@ MonoBehaviour:
   cameraLocation: {fileID: 1851442273}
   canvasGameMenu: {fileID: 245122463}
   location: {fileID: 265983234}
+  file: {fileID: 0}
   am: {fileID: 24100000, guid: e4469baa456f6914ea04368306cd0bb4, type: 2}
 --- !u!4 &246988797
 Transform:
@@ -3466,6 +3467,7 @@ MonoBehaviour:
   craftSystem: {fileID: 0}
   HPMANACanvas: {fileID: 0}
   currentHealth: 60
+  valForWeapon: 0
 --- !u!1001 &439660246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7804,10 +7806,10 @@ RectTransform:
   m_Father: {fileID: 43821360}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 691}
+  m_AnchorMin: {x: 0.06418019, y: 0.08654879}
+  m_AnchorMax: {x: 0.95500004, y: 0.89000005}
+  m_AnchoredPosition: {x: 0, y: -42.5}
+  m_SizeDelta: {x: 0, y: -85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1031972107
 MonoBehaviour:
@@ -12251,10 +12253,10 @@ RectTransform:
   m_Father: {fileID: 744819881}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.048144046, y: 0.08649981}
+  m_AnchorMax: {x: 0.948856, y: 0.9151459}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 120, y: 385}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1561717829
 MonoBehaviour:
@@ -12273,7 +12275,7 @@ MonoBehaviour:
     m_Right: 10
     m_Top: 35
     m_Bottom: 10
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
@@ -20224,6 +20226,7 @@ MonoBehaviour:
   cameraLocation: {fileID: 1851442273}
   canvasGameMenu: {fileID: 245122463}
   location: {fileID: 265983234}
+  file: {fileID: 0}
   am: {fileID: 24100000, guid: e4469baa456f6914ea04368306cd0bb4, type: 2}
 --- !u!1001 &3901160492216223845
 PrefabInstance:
