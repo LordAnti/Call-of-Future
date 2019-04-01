@@ -27,27 +27,39 @@ public class EnterCam : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     public float titAngle;
     public float rotationSpeed;
 
+    public Slider sliderx;
+    public Slider slidery;
     //Для персонажа
     public Vector3 rotationDirection;
     public Vector3 moveDirection;
     public Transform targetLook;
     public Animator anim;
 
+    public Transform player;
+
     void Update()
     {
-        delta = Time.deltaTime;
+        if (player.GetComponent<PHealth>().HP > 0)
+        {
+            delta = Time.deltaTime;
 
-        HandlePosition();
-        OnAnimatorIK();
+            cameraConfig.X_rot_speed = sliderx.value;
+            cameraConfig.Y_rot_speed = slidery.value;
+            HandlePosition();
+            OnAnimatorIK();
 
-        Vector3 targetPosition = Vector3.Lerp(mTransform.position, Character.position, 1);
-        mTransform.position = targetPosition;
+            Vector3 targetPosition = Vector3.Lerp(mTransform.position, Character.position, 1);
+            mTransform.position = targetPosition;
+        }
     }
 
     void LateUpdate()
     {
-        anim.SetLookAtPosition(targetLook.position);
-        anim.SetLookAtWeight(1.0f, 1.0f, 1.0f);
+        if (player.GetComponent<PHealth>().HP > 0)
+        {
+            anim.SetLookAtPosition(targetLook.position);
+            anim.SetLookAtWeight(1.0f, 1.0f, 1.0f);
+        }
     }
 
     public virtual void OnPointerDown(PointerEventData ped)
@@ -62,7 +74,7 @@ public class EnterCam : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
 
     public virtual void OnDrag(PointerEventData ped)
     {
-        if (Time.timeScale == 1)
+        if ((Time.timeScale == 1) && (player.GetComponent<PHealth>().HP > 0))
         {
             x = ped.delta.x / 200;
             y = -ped.delta.y / 200;
@@ -83,7 +95,7 @@ public class EnterCam : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
                     smoothY = mouseY;
                 }
 
-                lookAngel += smoothX * cameraConfig.Y_rot_speed;
+                lookAngel += smoothX * cameraConfig.X_rot_speed;
                 Quaternion targetRot = Quaternion.Euler(0, lookAngel, 0);
                 mTransform.rotation = targetRot;
 

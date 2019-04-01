@@ -3,7 +3,13 @@ guid: 0b0015ca67eb8a643ba48728c1846ed6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cameraGameMenu: {instanceID: 0}
+  - cameraLocation: {instanceID: 0}
+  - canvasGameMenu: {instanceID: 0}
+  - location: {instanceID: 0}
+  - am: {instanceID: 0}
+  - cameraConfig: {fileID: 11400000, guid: 28eb5898477859a4ea6b63b41111cb25, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

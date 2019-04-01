@@ -53,13 +53,13 @@ public class CharacterMovement : MonoBehaviour
         MoveUpdate();
         RotationNormal();
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        /*if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             if (characterStatus.isPistol == true)
                 characterStatus.isPistol = false;
             else
                 characterStatus.isPistol = true;
-        }
+        }*/
 
         if (characterStatus.isPistol == true)
         {

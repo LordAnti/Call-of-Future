@@ -10,6 +10,23 @@ TagManager:
   - Run
   - Jump
   - Vasya
+  - Slot
+  - Panel
+  - ItemIcon
+  - Item
+  - Sand
+  - EventSystem
+  - EquipmentSystem
+  - Slots
+  - Meat
+  - Wood
+  - Canvas
+  - DraggingItem
+  - Stone
+  - Metal
+  - Hero
+  - AreTouch
+  - MainInventory
   layers:
   - Default
   - TransparentFX

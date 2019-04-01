@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -15,17 +13,25 @@ public class Staps : MonoBehaviour, IPointerDownHandler
 
     public GameObject cameraGameMenu;
 
+    public GameObject ImageAre;
+
     public GameObject cameraLocation;
 
     public GameObject canvasGameMenu;
 
     public GameObject location;
 
+    public Image image;
+
     public AudioMixer am;
+
+    public Slider sliderx;
+    public Slider slidery;
 
     private float newValue;
 
     public static Staps staps;
+    public CameraConfig cameraConfig;
 
     void Start()
     {
@@ -34,7 +40,7 @@ public class Staps : MonoBehaviour, IPointerDownHandler
         am.GetFloat("masterVolume", out newValue);
         //GameObject.Find("SliderAudio").GetComponent<Slider>().value = newValue;
         //GameObject.Find("Dropdown").GetComponent<Dropdown>().value = QualitySettings.GetQualityLevel();
-        Debug.Log("Пустое - "+newValue.ToString());
+        Debug.Log("Пустое - " + newValue.ToString());
     }
 
     public void ExitToMainMenu()
@@ -65,6 +71,8 @@ public class Staps : MonoBehaviour, IPointerDownHandler
         cameraLocation.SetActive(false);
         canvasGameMenu.SetActive(true);
         cameraGameMenu.SetActive(true);
+        sliderx.value = cameraConfig.X_rot_speed;
+        slidery.value = cameraConfig.Y_rot_speed;
         location.SetActive(false);
     }
     /// <summary>
@@ -87,13 +95,11 @@ public class Staps : MonoBehaviour, IPointerDownHandler
 
     public void X_Orientation(float X_OrientationValue)
     {
-        CameraConfig config = new CameraConfig();
-        config.X_rot_speed = X_OrientationValue;
+        //
     }
 
     public void Y_Orientation(float Y_OrientationValue)
     {
-        CameraConfig config = new CameraConfig();
-        config.Y_rot_speed = Y_OrientationValue;
+        //
     }
 }

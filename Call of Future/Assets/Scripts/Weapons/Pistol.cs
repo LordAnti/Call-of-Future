@@ -88,9 +88,17 @@ public class Pistol : MonoBehaviour
                         SpawnDecal(hit, woodEffect);
                         break;
                     case "Meat":
-                        SpawnDecal(hit, meatEffect);
+                        if (hit.collider.transform.GetComponent<HitDamage>() != null)
+                        {
+                            hit.collider.transform.GetComponent<HitDamage>().AddDamage(40, "bullet", "bullet");
+                            SpawnDecal(hit, meatEffect);
+                        }
+                        else
                         if (hit.transform.GetComponent<PHealth>())
+                        {
                             hit.transform.GetComponent<PHealth>().AddDamage(40, "bullet", "bullet");
+                            SpawnDecal(hit, meatEffect);
+                        }
                         break;
                     default:
                         dec = Instantiate<GameObject>(decal);

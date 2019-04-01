@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Timers;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PHealth : MonoBehaviour
@@ -9,10 +11,15 @@ public class PHealth : MonoBehaviour
     public Slider slArmor;
     Animator anim;
     public bool Player;
+    int i = 0;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        if (slHealth != null)
+            slHealth.value = HP;
+        if (slArmor != null)
+            slArmor.value = AP;
     }
 
     public void AddDamage(float damage, string typeDamage, string typeFall)
@@ -31,7 +38,7 @@ public class PHealth : MonoBehaviour
 
             if (AP < 0)
             {
-                HP -= AP;
+                HP += AP;
                 AP = 0;
             }
         }
@@ -43,8 +50,26 @@ public class PHealth : MonoBehaviour
 
         if (HP <= 0)
         {
-            anim.SetBool("Dyiling1", true);
+            anim.speed = 3;
+            if (Player == true)
+            {
+                anim.SetTrigger("Dying");
+                transform.GetComponent<IKController>().ikActive = false;
+                InvokeRepeating("timerUpdate", 2f, 1);
+                //Destroy(transform.GetComponent<CharacterController>());
+            }
+            else
+            {
+                anim.speed = 3;
+                anim.SetTrigger("Dying1");
+            }
         }
+    }
 
+    public void timerUpdate()
+    {
+        i++;
+        if (i > 10)
+            SceneManager.LoadScene("MainMenu");
     }
 }

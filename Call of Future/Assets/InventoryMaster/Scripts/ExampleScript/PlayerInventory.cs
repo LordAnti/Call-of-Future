@@ -41,7 +41,7 @@ public class PlayerInventory : MonoBehaviour
         Inventory.UnEquipItem += UnEquipBackpack;
 
         Inventory.ItemEquip += OnGearItem;
-        Inventory.ItemConsumed += OnConsumeItem;
+        //Inventory.ItemConsumed += OnConsumeItem;
         Inventory.UnEquipItem += OnUnEquipItem;
 
         Inventory.ItemEquip += EquipWeapon;
@@ -54,7 +54,7 @@ public class PlayerInventory : MonoBehaviour
         Inventory.UnEquipItem -= UnEquipBackpack;
 
         Inventory.ItemEquip -= OnGearItem;
-        Inventory.ItemConsumed -= OnConsumeItem;
+        //Inventory.ItemConsumed -= OnConsumeItem;
         Inventory.UnEquipItem -= OnUnEquipItem;
 
         Inventory.UnEquipItem -= UnEquipWeapon;
@@ -176,8 +176,8 @@ public class PlayerInventory : MonoBehaviour
         if (craftSystem != null)
             cS = craftSystem.GetComponent<CraftSystem>();
 
-        if (GameObject.FindGameObjectWithTag("Tooltip") != null)
-            toolTip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<Tooltip>();
+        //if (GameObject.FindGameObjectWithTag("Tooltip") != null)
+        //    toolTip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<Tooltip>();
         if (inventory != null)
             mainInventory = inventory.GetComponent<Inventory>();
         if (characterSystem != null)
@@ -201,7 +201,7 @@ public class PlayerInventory : MonoBehaviour
     //}
 
 
-    public void OnConsumeItem(Item item)
+    /*public void OnConsumeItem(Item item)
     {
         for (int i = 0; i < item.itemAttributes.Count; i++)
         {
@@ -239,7 +239,7 @@ public class PlayerInventory : MonoBehaviour
         //    UpdateManaBar();
         //    UpdateHPBar();
         //}
-    }
+    }*/
 
     public void OnGearItem(Item item)
     {
