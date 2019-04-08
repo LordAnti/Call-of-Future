@@ -22,6 +22,8 @@ public class Staps : MonoBehaviour, IPointerDownHandler
     public GameObject location;
 
     public Image image;
+    public GameObject file;
+
 
     public AudioMixer am;
 
